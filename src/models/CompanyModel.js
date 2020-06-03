@@ -32,6 +32,14 @@ class CompanyModel {
       return err
     }
   }
+
+  async getByTokenCompany(token) {
+    try {
+      return await database('company').select('id', 'name', 'callback', 'token', 'active', 'created_at', 'updated_at').where({ token, active: true })
+    } catch (err) {
+      return err
+    }
+  }
 }
 
 module.exports = CompanyModel

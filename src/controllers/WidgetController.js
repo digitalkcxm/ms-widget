@@ -61,7 +61,7 @@ class WidgetController {
       req.body.theme ? obj.theme = req.body.theme : ''
       typeof req.body.active == 'boolean' ? obj.active = req.body.active : ''
 
-      let widget = await widgetModel.update(req.body.token, obj)
+      let widget = await widgetModel.update(req.company.id, req.body.token, obj)
 
       if (widget.name == 'error' && widget.code == '23505')
         return res.status(400).send({ error: 'Já existe um widget com este nome cadastrado' })
@@ -74,7 +74,6 @@ class WidgetController {
       })
 
       return res.status(200).send(widget[0])
-
     } catch (err) {
       return res.status(500).send({ error: 'Ocorreu algum erro ao tentar realizar update no Widget.' })
     }

@@ -10,16 +10,8 @@
     "seed:run": "./node_modules/.bin/run.env ./node_modules/.bin/knex seed:run",
     "migrate:rollback": "./node_modules/.bin/run.env ./node_modules/.bin/knex migrate:rollback"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/estanisquevedo/ms-whatsapp.git"
-  },
   "author": "Luiz Duarte",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/estanisquevedo/ms-whatsapp/issues"
-  },
-  "homepage": "https://github.com/estanisquevedo/ms-whatsapp#readme",
   "devDependencies": {
     "nodemon": "^1.19.0",
     "run.env": "^1.1.0"

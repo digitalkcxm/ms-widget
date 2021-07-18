@@ -1,5 +1,3 @@
-NODE
-
 stages:
   - homol
   - check_homol

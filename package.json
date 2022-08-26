@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "NODE_ENV=testing NODE_OPTIONS='--experimental-vm-modules' ./node_modules/.bin/run.env jest --detectOpenHandles --forceExit --passWithNoTests",
+    "test": "echo \"Error: no test specified\"",
     "migrate:latest": "./node_modules/.bin/run.env ./node_modules/.bin/knex migrate:latest",
     "seed:run": "./node_modules/.bin/run.env ./node_modules/.bin/knex seed:run",
     "migrate:rollback": "./node_modules/.bin/run.env ./node_modules/.bin/knex migrate:rollback"

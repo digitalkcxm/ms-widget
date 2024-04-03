@@ -470,6 +470,10 @@ deploy_bs:
   only:
     - master
   when: manual
+  needs: 
+    - create-release
+  dependencies:
+    - create-release  
   allow_failure: false
   tags:
     - microservicos
@@ -595,6 +599,10 @@ deploy_ld:
   only:
     - master
   when: manual
+  needs: 
+    - create-release
+  dependencies:
+    - create-release  
   allow_failure: false
   tags:
     - microservicos

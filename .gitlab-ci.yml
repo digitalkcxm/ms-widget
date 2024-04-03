@@ -468,7 +468,7 @@ deploy_bs:
       fi
 
   only:
-    - tags
+    - master
   when: manual
   allow_failure: false
   tags:
@@ -531,7 +531,7 @@ check_bs:
       fi
 
   only:
-    - tags
+    - master
   allow_failure: false
   needs: ["deploy_bs"]
   tags:
@@ -593,7 +593,7 @@ deploy_ld:
       fi
 
   only:
-    - tags
+    - master
   when: manual
   allow_failure: false
   tags:
@@ -655,7 +655,7 @@ check_ld:
       fi
 
   only:
-    - tags
+    - master
   allow_failure: false
   needs: ["deploy_ld"]
   tags:

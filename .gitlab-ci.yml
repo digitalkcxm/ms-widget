@@ -605,7 +605,7 @@ deploy_syscob:
   tags:
     - microservicos
 
-check_ld:
+check_syscob:
   stage: check_prod
   image: ubuntu:20.04
   before_script:
